@@ -16,12 +16,15 @@
     flex-direction: row;
     width: 100%;
 }
+
+/* header is dodger blue and by default, is shifted to the left of the screen */
 header {
     background-color: dodgerblue;
     text-align: left;
 }
 
-/* The following are style for the Nav Bar */
+/* The following are style for the Nav Bar. Per requirements, it takes up max 30%
+    of the screen in normal resolution*/
 nav {
     background-color: deepskyblue;
     width: 30%;
@@ -50,12 +53,13 @@ nav a {
     color: black;
 }
 
+/* By requirement, the main should take up 70% of the screen for normal resolution */
 main {
     background-color: aliceblue;
     width: 70%;
     min-height: 100vh;
 }
-
+/*used the calc function to increase the font size */
 main p {
     font-size: calc(14px + 0.5vw);
 }
@@ -72,6 +76,14 @@ main p {
     font-size: calc(14px + 0.5vw);
 }
 
+/* .calc-proj, .input-sec, .calc-options, all aim to style my calculator to give it
+    a good structured look in the bottom of the projects tab
+ */
+
+/* The Buttons are in a column and are spaced out from each other. The boxes
+    have a shadow to them too in order to be distinct from the background.
+
+ */
 .calc-proj {
     display: flex;
     flex-direction: column;
@@ -109,6 +121,9 @@ img {
     height: auto;
 }
 
+/*
+    Distinct size for the resume
+ */
 #resume {
     max-width: 550px;
     height: auto;
@@ -154,8 +169,17 @@ footer {
         color: black;
     }
 
-    /*Project Modifications*/
+    /*Project Modifications: Keep the content stacked as blocks
+       instead of inline
+     */
     .segments {
         display: block;
+    }
+
+    /* Keeps image centered */
+    img {
+        display: block;
+        margin: auto;
+
     }
 }

@@ -4,6 +4,7 @@ let output = document.getElementById("output")
 
 //helper function to make negative numbers red
 function outputColor(result) {
+    //Determines color based on if positive or negative
     if (result < 0) {
         output.style.color = "red";
     } else {
@@ -30,7 +31,6 @@ function doMultiply() {
 
 function doDivide() {
     let result = Number(one.value) / Number(two.value);
-    //Determines color based on if positive or negative
     output.innerHTML = String(result);
     outputColor(result);
 }
@@ -40,12 +40,14 @@ function doExp() {
     let exp = Number(two.value);
     let result = 1;
 
+    //Iterate for exp amount of times, each iteration multiply num to itself
+    //Must abs the exp incase of -input
     for (let i = 0; i < Math.abs(exp); i++)
     {
         result *= num;
     }
 
-    // Check for negative exponent, if so then reciprocol result
+    // Check for negative exponent, if so then recipricol result
     if (exp < 0)
     {
         result = 1/result;
