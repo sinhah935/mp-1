@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#page-wrapper {
+    width: 80vw;
+    margin: 0 auto;
+}
+
+/* This is a div including navbar and main body. Its purpose is to keep the navbar
+    to the left and main body to the right(unless screen becomes smaller)
+ */
+#container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+header {
+    background-color: dodgerblue;
+    text-align: left;
+}
+
+/* The following are style for the Nav Bar */
+nav {
+    background-color: deepskyblue;
+    width: 30%;
+
+}
+nav ul {
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+nav li {
+    border: 2px solid black;
+    display: block;
+    padding: 2%;
+    margin: 3% 0;
+    width: 80%;
+    text-align: center;
+    background-color: dodgerblue;
+
+}
+nav a {
+    text-decoration: none;
+    font-size: calc(2px + 2vw);
+    color: black;
+}
+
+main {
+    background-color: aliceblue;
+    width: 70%;
+    min-height: 100vh;
+}
+
+main p {
+    font-size: calc(14px + 0.5vw);
+}
+
+/* Separator to allow Image and Descriptions to stay side by side */
+.segments {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 40px;
+}
+
+.segments li {
+    font-size: calc(14px + 0.5vw);
+}
+
+.calc-proj {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    gap: 20px;
+    margin: 20px;
+    padding-bottom: 50px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.input-sec {
+    display: flex;
+    flex-direction: column;
+}
+.input-sec input {
+    padding: 5px;
+    font-size: calc(14px + 0.5vw);
+}
+.calc-options {
+    display: grid;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.calc-options button {
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Image Size For All */
+img {
+    max-width: 300px;
+    height: auto;
+}
+
+#resume {
+    max-width: 550px;
+    height: auto;
+}
+
+h2 {
+    text-align: center;
+}
+
+footer {
+    background-color: dodgerblue;
+    text-align: center;
+}
+
+/* This applies for mobile design*/
+@media screen and (max-width: 1000px)
+{
+    #container {
+        flex-direction: column;
+    }
+    header {
+        text-align: center;
+    }
+    main {
+        width: 100%;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: row;
+    }
+
+    nav li {
+        display: inline;
+        padding: 5px;
+    }
+    nav a
+    {
+        text-decoration: none;
+        color: black;
+    }
+
+    /*Project Modifications*/
+    .segments {
+        display: block;
+    }
+}

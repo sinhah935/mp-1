@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title > MP1  |  Projects </title>
+    <link rel="stylesheet" type="text/css" href="../index.css">
+</head>
+<body>
+    <div id="page-wrapper">
+        <header>
+            <h1>Projects</h1>
+        </header>
+
+        <div id="container">
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../edu/education-page.html">Education</a></li>
+                    <li><a href="../exp/experience-page.html">Experience</a></li>
+                    <li><a href="projects-page.html">Projects</a></li>
+                    <li><a href="../cert/certifications-page.html">Certifications</a></li>
+                    <li><a href="../doc/documents-page.html">Documents</a></li>
+                </ul>
+            </nav>
+
+            <!--     Main Body of Home Page -->
+            <main>
+                <h2> My Projects </h2>
+                <br>
+                <div class="segments">
+                    <img src="../img/car.png" alt="Car">
+                    <div class="project-desc">
+                        <h2 class="project"> Autonomous F1Tenth Vehicle</h2>
+                        <br>
+                        <p class="proj-description"> This is a project I worked on with my club members in the BU F1Tenth group.
+                            I have recently been appointed Vice President of the club, and my goal is to
+                            aid new members into constructing their own car and participate in a
+                            university tournament. <br> The car itself is controlled by an NVIDIA Nano Jetson, which is responsible for
+                            the computations necessary for Autonomous driving. The Lidar in the front collects data regarding the
+                            car's surroundings and feeds this into the Jetson. This data is then used to calculate the angle of the
+                            servos to adjust turning radius. Speed is also another variable changed. This is all done leveraging PID
+                            control.</p>
+                    </div>
+                </div>
+
+                <div class="segments">
+                    <img src="../img/board.png" alt="Ball-Board">
+                    <div class="project-desc">
+                        <h2 class="project"> Ball-Balancing</h2>
+                        <br>
+                        <p class="proj-description"> This project was done during my participation
+                            in CS454: Embedded Systems. Throughout this course, we learned how to
+                            program on a dsPIC33. We learned how to program I/O devices, learned
+                            UART Serial Communication, and eventually worked our way to learn
+                            PID control to center a ball in the middle of a Touch Screen Board.</p>
+                    </div>
+                </div>
+
+                <div class="segments">
+                    <div class="project-desc">
+                        <h2 class="project"> Image Processing Server</h2>
+                        <p class="proj-description"> This project was done during my participation
+                            in CS350: Distributed Systems. The objective was to create an Image
+                            Processing Server that took in an influx of image changing requests.
+                            Our goal was to have multiple threads perform each request in a
+                            First In First Out(FIFO) scheduler. To prevent race conditions and
+                            multiple threads picking up the same request, I implemented
+                            semaphores/mutexes to ensure one thread had write access to the
+                            queue of requests at a time.</p>
+                    </div>
+                </div>
+
+<!--                This is where the calculator resides-->
+                <div class="calc-proj">
+                    <h2 class="project"> Calculator: </h2>
+
+                    <div class="input-sec">
+                        <label for="one">Give me number:</label><input id="one">
+                        <label for="two">Give me number:</label><input id="two">
+                    </div>
+
+                    <h2 id="output"></h2>
+
+                    <div class="calc-options">
+                        <button onClick="doAdd()">+</button>
+                        <button onClick="doSub()">-</button>
+                        <button onClick="doMultiply()">X</button>
+                        <button onClick="doDivide()">/</button>
+                        <button onClick="doExp()">^</button>
+                        <button onClick="doClear()">CE</button>
+                    </div>
+
+                    <script src="../index.js"></script>
+                </div>
+
+            </main>
+        </div>
+
+        <!--     Footer -->
+        <footer>
+            <p>&#169; All Rights Reserved by Mohammed Sinhah
+                <a href="credits.html">Credits</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
